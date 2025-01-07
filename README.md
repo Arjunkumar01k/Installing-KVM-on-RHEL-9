@@ -1,7 +1,5 @@
 # Installing-KVM-on-RHEL-9
 
-# KVM Installation and Configuration Guide
-
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)
@@ -32,21 +30,20 @@ To get started, verify if your system supports Virtualization. This is typically
 
 ### For Intel CPUs
 
-```bash
 $ grep -e 'vmx' /proc/cpuinfo
 
 
 
-If you are running an Intel CPU, and the output confirms that virtualization is already enabled, you are good to go.
+#### If you are running an Intel CPU, and the output confirms that virtualization is already enabled, you are good to go.
 For AMD CPUs
 
 $ grep -e 'svm' /proc/cpuinfo
 
-Alternatively, you can run the following command to verify the Virtualization status:
+#### Alternatively, you can run the following command to verify the Virtualization status:
 
 $ lscpu | grep Virtualization
 
-Additionally, check if KVM modules are loaded:
+#### Additionally, check if KVM modules are loaded:
 
 $ lsmod | grep kvm
 
